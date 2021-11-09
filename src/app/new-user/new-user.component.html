@@ -1,0 +1,40 @@
+<div class="container my-3">
+    <h1>New User</h1>
+<form>
+    <div class="my-3">
+      <div class="row my-3">
+        <input type="text" [(ngModel)]="user.Ragionesociale" class="form-control" name="name" placeholder="Name...">
+      </div>
+      <div class="row my-3">
+        <input type="text" [(ngModel)]="user.Partitaiva" class="form-control" name="username" placeholder="Username...">
+      </div>
+      <div class="row my-3">
+        <input type="text" [(ngModel)]="user.tipocliente" class="form-control" name="email" placeholder="Email...">
+      </div>
+      <div class="row my-3">
+        <input type="text" [(ngModel)]="user.email" class="form-control" name="phone" placeholder="Phone...">
+      </div>
+      <div class="row my-3">
+        <input type="text" [(ngModel)]="user.pec" class="form-control" name="website" placeholder="Website...">
+      </div>
+      <div class="row my-3">
+        <input type="text" [(ngModel)]="user.telefono" class="form-control" name="website" placeholder="Website...">
+      </div>
+      <div class="row my-3">
+        <input type="text" [(ngModel)]="user.nomeContatto" class="form-control" name="website" placeholder="Website...">
+      </div>
+      <div class="row my-3">
+        <input type="text" [(ngModel)]="user.cognomeContatto" class="form-control" name="website" placeholder="Website...">
+      </div>
+      <div class="row my-3">
+        <input type="text" [(ngModel)]="user.telefonoContatto" class="form-control" name="website" placeholder="Website...">
+      </div>
+      <div class="row my-3">
+        <input type="text" [(ngModel)]="user.indirizzoSedeOperativa" class="form-control" name="website" placeholder="Website...">
+      </div>
+      <div class="row my-3">
+        <button type="button" class="btn btn-dark form-control" (click)="saveUser()">Save User</button>
+      </div>
+    </div>
+  </form>
+</div>

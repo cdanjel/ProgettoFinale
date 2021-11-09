@@ -9,6 +9,8 @@ import { MioHeaderComponent } from './mio-header/mio-header.component';
 import { MioFooterComponent } from './mio-footer/mio-footer.component';
 import { MioLoginComponent } from './mio-login/mio-login.component';
 import { UserlistComponent } from './userlist/userlist.component';
+import { FormsModule } from '@angular/forms';
+import { NewUserComponent } from './new-user/new-user.component';
 
 @NgModule({
   declarations: [
@@ -17,12 +19,16 @@ import { UserlistComponent } from './userlist/userlist.component';
 
     MioFooterComponent,
     MioLoginComponent,
-    UserlistComponent
+    UserlistComponent,
+    NewUserComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    FormsModule,
+    /*HttpClientModule,*/
+
   ],
   providers: [],
   bootstrap: [AppComponent]
