@@ -1,0 +1,44 @@
+<div class="container my-3">
+    <h1>Table Users</h1>
+    <table class="table table-striped">
+        <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Ragione sociale</th>
+          <th scope="col">P.Iva</th>
+          <th scope="col">Tipo cliente</th>
+          <th scope="col">Email</th>
+          <th scope="col">Pec</th>
+          <th scope="col">Telefono</th>
+          <th scope="col">NomeContatto</th>
+          <th scope="col">CognomeContatto</th>
+          <th scope="col">telefonoContatto</th>
+          <th scope="col">emailContatto</th>
+          <th scope="col">indirizzoSedeOperativa</th>
+          <th scope="col"></th>
+
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let item of users; index as i">
+          <th scope="row">{{ i + 1 }}</th>
+          <td>{{ item.Ragionesociale}}</td>
+          <td>{{ item.Partitaiva }}</td>
+          <td>{{ item.tipocliente }}</td>
+          <td>{{ item.email }}</td>
+          <td>{{ item.pec }}</td>
+          <td>{{ item.telefono }}</td>
+          <td>{{ item.nomeContatto }}</td>
+          <td>{{ item.cognomeContatto }}</td>
+          <td>{{ item.telefonoContatto }}</td>
+          <td>{{ item.indirizzoSedeOperativa }}</td>
+          <td></td>
+
+          <td>
+            <button type="button" class="btn btn-danger" (click)="removeUser(item)">Elimina</button>
+            <button type="button" class="btn btn-warning" (click)="selectUser(item)">Modifica</button>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+</div>
