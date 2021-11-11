@@ -13,22 +13,21 @@ import { UserlistComponent } from './userlist/userlist.component';
 import { FormsModule } from '@angular/forms';
 import { NewUserComponent } from './new-user/new-user.component';
 import { PresetazioneHomeComponent } from './presetazione-home/presetazione-home.component';
+import { HttpClientModule } from '@angular/common/http';
+import { ClientiComponent } from './clienti/clienti.component';
 
 const routes: Routes = [
   { 
-    path: 'userlist',
+    path: '',
+    component: PresetazioneHomeComponent
+    
+  },
+  { 
+    path: 'user/userlist',
     component: UserlistComponent
   },
-  { path: '',
-    pathMatch: 'full',
-    redirectTo: 'userlist'
-  },
   { 
-    path: 'users/new',
-    component: NewUserComponent
-  },
-  { 
-    path: 'users/:id/edit',
+    path: 'user/new-user',
     component: NewUserComponent
   }
 ]
@@ -42,14 +41,15 @@ const routes: Routes = [
     MioLoginComponent,
     UserlistComponent,
     NewUserComponent,
-    PresetazioneHomeComponent
+    PresetazioneHomeComponent,
+    ClientiComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
     FormsModule,
-    /*HttpClientModule,*/
+    HttpClientModule,
     RouterModule.forRoot(routes)
 
   ],

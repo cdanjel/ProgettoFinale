@@ -1,7 +1,7 @@
 export interface IUser {
     id?: number;
-    Ragionesociale: string;
-    Partitaiva: string;
+    ragionesociale: string;
+    partitaiva: string;
     tipocliente: string;
     email: string;
     pec: string;
@@ -9,6 +9,41 @@ export interface IUser {
     nomeContatto: string;
     cognomeContatto: string;
     telefonoContatto: string;
-    indirizzoSedeOperativa: string;
+    emailContatto: string;
+    indirizzoSedeOperativa: {
+        id?: number;
+        via: string;
+        civico: string;
+        cap: string;
+        localita: string;
+        comune: {
+            id?: number;
+            nome: string;
+            provincia: {
+                id?: number;
+                nome: string;
+                sigla: string;
+            }
+        }
+    };
+    indirizzoSedeLegale: {
+        id?: number;
+        via: string;
+        civico: string;
+        cap: string;
+        localita: string;
+        comune: {
+            id?: number;
+            nome: string;
+            provincia: {
+                id?: number;
+                nome: string;
+                sigla: string;
+            }
+        }
+    };
+    dataInserimento: string;
+    dataUltimoContatto: string;
+    fatturatoAnnuale: number;
 
 }
