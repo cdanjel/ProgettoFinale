@@ -25,7 +25,6 @@ export class UserlistComponent implements OnInit {
   }
 
   selectUser(item: IUser): void {
-
     this.router.navigate(['users', item.id, 'edit']);
   }
 

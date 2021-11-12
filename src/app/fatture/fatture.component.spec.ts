@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { MioFooterComponent } from './mio-footer.component';
+import { FattureComponent } from './fatture.component';
 
-describe('MioFooterComponent', () => {
-  let component: MioFooterComponent;
-  let fixture: ComponentFixture<MioFooterComponent>;
+describe('FattureComponent', () => {
+  let component: FattureComponent;
+  let fixture: ComponentFixture<FattureComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ MioFooterComponent ]
+      declarations: [ FattureComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(MioFooterComponent);
+    fixture = TestBed.createComponent(FattureComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

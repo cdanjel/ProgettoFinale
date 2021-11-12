@@ -7,7 +7,6 @@ import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { MioHeaderComponent } from './mio-header/mio-header.component';
 
-import { MioFooterComponent } from './mio-footer/mio-footer.component';
 import { MioLoginComponent } from './mio-login/mio-login.component';
 import { UserlistComponent } from './userlist/userlist.component';
 import { FormsModule } from '@angular/forms';
@@ -15,20 +14,26 @@ import { NewUserComponent } from './new-user/new-user.component';
 import { PresetazioneHomeComponent } from './presetazione-home/presetazione-home.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ClientiComponent } from './clienti/clienti.component';
+import { FattureComponent } from './fatture/fatture.component';
 
 const routes: Routes = [
-  { 
+  {
     path: '',
     component: PresetazioneHomeComponent
-    
+
   },
-  { 
+  {
+    path: '',
+    pathMatch: 'full',
+    redirectTo: 'users'
+  },
+  {
     path: 'user/userlist',
     component: UserlistComponent
   },
-  { 
-    path: 'user/new-user',
-    component: NewUserComponent
+  {
+    path: 'user/fatture',
+    component: FattureComponent
   }
 ]
 
@@ -36,13 +41,12 @@ const routes: Routes = [
   declarations: [
     AppComponent,
     MioHeaderComponent,
-
-    MioFooterComponent,
     MioLoginComponent,
     UserlistComponent,
     NewUserComponent,
     PresetazioneHomeComponent,
-    ClientiComponent
+    ClientiComponent,
+    FattureComponent
   ],
   imports: [
     BrowserModule,
